@@ -1,1 +1,0 @@
-# CodeCamp2017-Team6

@@ -1,0 +1,24 @@
+{
+  "name": "bcbstn-code-camp-2017",
+  "version": "1.0.0",
+  "description": "Slackbot Bootstrap for BCBSTN Code Camp 2017",
+  "main": "Bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephen-hall-bcbst-com/CodeCamp2017-Team1.git"
+  },
+  "author": "James Dean <james_dean@bcbst.com>; Stephen Hall <stephen_hall@bcbst.com>",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/stephen-hall-bcbst-com/CodeCamp2017-Team1/issues"
+  },
+  "homepage": "https://github.com/stephen-hall-bcbst-com/CodeCamp2017-Team1#readme",
+  "dependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-google": "^0.9.1",
+    "slackbots": "^1.0.2"
+  }
+}
