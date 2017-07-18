@@ -14,6 +14,10 @@ module.exports = {
 
         Slack.postMessageToChannel(channelName, 'Message received.');
 
+        if (message.includes('hi, Hi, HI, hello, Hello, HELLO, hey, Hey, HEY')) {
+            console.log ('Hello.');
+        }
+
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
