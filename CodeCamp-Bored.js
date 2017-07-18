@@ -15,7 +15,7 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channel, 'What are you waiting for?');
+        Slack.postMessageToChannel(channel, 'Talk to me. Give me the juicy stuff.');
 
         // *********************************************************************
         // STOP CODING!
