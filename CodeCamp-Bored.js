@@ -1,5 +1,7 @@
 'use strict';
 
+var helper = require('./Helpers.js');
+
 module.exports = {
     settings: {
         enabled: true,
@@ -15,11 +17,14 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channel, 'Hello?');
-        Slack.postMessageToChannel(channel, 'Im so lonely...');
-        Slack.postMessageToChannel(channel, 'Can I get uhh.. Boneless Biscuit?');
-        Slack.postMessageToChannel(channel, 'Talk to me!');
-        Slack.postMessageToChannel(channel, 'I am bored to death');
+        var replies = [
+            "Hello?", 
+            "I'm so lonely...", 
+            "Talk to me!"];
+
+        var response = helper.phraseAtRandom(replies);
+
+        Slack.postMessageToChannel(channel, response);
 
         // *********************************************************************
         // STOP CODING!
