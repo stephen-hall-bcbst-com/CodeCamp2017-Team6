@@ -207,9 +207,21 @@ function getLastChannel() {
 }
 
 // timer for boredom detection
+function getTimeoutInSecondsWithFence() {
+    if (CodeCampBored.settings.timeoutInSeconds < 10) {
+        return 10;
+    } else {
+        if (CodeCampBored.settings.timeoutInSeconds > 60) {
+            return 60;
+        } else {
+            return CodeCampBored.settings.timeoutInSeconds;
+        }
+    }
+}
+
 var boredomTimer = null;
 function boredomHandler() {
-    boredomTimer = setTimeout(boredomHandler, CodeCampBored.settings.timeoutInSeconds * 1000);
+    boredomTimer = setTimeout(boredomHandler, getTimeoutInSecondsWithFence() * 1000);
     CodeCampBored.bored(getLastChannel(), Bot);
 }
 
@@ -223,7 +235,7 @@ function createBoredomTimer() {
         boredomTimer = null;
     }
 
-    boredomTimer = setTimeout(boredomHandler, CodeCampBored.settings.timeoutInSeconds * 1000);
+    boredomTimer = setTimeout(boredomHandler, getTimeoutInSecondsWithFence() * 1000);
 }
 
 /**
