@@ -14,16 +14,18 @@ module.exports = {
 
         message = message.toLowerCase();
 
-        // User: Hi./Hello./Hey.
-        if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
-        // Bot: Hello. How are you.
-            Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
+var memory = require('./codeCamp-memory.js');
+        if (memory.lastQuestion == "name") {
+            memory.name = message;
+            memory.lastQuestion = '';
+            Slack.postMessageToChannel(channelName, ':wave: Hello. How are you, '+ memory.name + '? :wave:');
+
         // User: Good./Great./Awesome./Amazing./Excellent.  
         } else if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
            message.includes('excellent')) {
         // Bot: What does j-U-D-G-E spell?  
-           Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+           Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell, '+ memory.name + '?');
         // User: Judge.
         } else if (message.includes('judge')) {
         // Bot: So, are you judging me?

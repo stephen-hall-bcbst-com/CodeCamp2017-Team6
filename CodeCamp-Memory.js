@@ -4,4 +4,6 @@ var botData = require('./data/bot');
 
 module.exports = {
     botData: botData,
+    lastQuestion: '',
+    name: ''
 };

@@ -20,7 +20,7 @@ if (question.includes('What time is it?')) {
     return;
 }
 
-// 8 Ball
+// 8 Ball randomizer
 
 var replies = [
             ":8ball: The answer is: no. :8ball:", 
