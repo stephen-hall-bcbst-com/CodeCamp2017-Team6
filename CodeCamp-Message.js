@@ -23,7 +23,7 @@ module.exports = {
            message.includes('excellent')) {
             Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
         }
-
+ 
         if (message.includes('judge')) {
             Slack.postMessageToChannel(channelName, 'So, are you judging me?');
         }
