@@ -21,6 +21,7 @@ var replies = [
             "The answer is: concentrate and ask later.",
             "The answer is: most likely.",
             "The answer is: forget it.",
+            "The answer is: I dont know",
             ];
 
         var response = helper.phraseAtRandom(replies);
