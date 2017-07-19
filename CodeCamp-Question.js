@@ -1,4 +1,6 @@
 'use strict';
+
+var helper = require('./Helpers.js');
 module.exports = {
     /**
      * @param {string} question
@@ -11,7 +13,21 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channelName, "How are you");
+var replies = [
+            "The answer is: no.", 
+            "The answer is: I have no clue.", 
+            "The answer is: possibly.",
+            "The answer is: yes.",
+            "The answer is: concentrate and ask later.",
+            "The answer is: most likely.",
+            "The answer is: forget it.",
+            ];
+
+        var response = helper.phraseAtRandom(replies);
+
+        if (question.includes('Is') || question.includes('Am') || question.includes('Are')) {
+            Slack.postMessageToChannel(channelName, response);
+        }
 
         // *********************************************************************
         // STOP CODING!

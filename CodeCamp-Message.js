@@ -12,11 +12,25 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-        Slack.postMessageToChannel(channelName, 'Message received.');
+        message = message.toLowerCase();
 
-        if (message.includes('hi, Hi, HI, hello, Hello, HELLO, hey, Hey, HEY')) {
-            console.log ('Hello.');
+        if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
+            Slack.postMessageToChannel(channelName, 'Hello. How are you?');
         }
+
+       if (message.includes('good') || message.includes('great') || 
+           message.includes('awesome') || message.includes('amazing') || 
+           message.includes('excellent')) {
+            Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+        }
+
+        if (message.includes('judge')) {
+            Slack.postMessageToChannel(channelName, 'So, are you judging me?');
+        }
+
+        if (message.includes('y')) {
+            Slack.postMessageToChannel(channelName, 'One of you said that you take bribes. I have might have $75 if my team wins in 1st place. -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
+         }
 
         // *********************************************************************
         // STOP CODING!
