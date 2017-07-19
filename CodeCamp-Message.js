@@ -24,6 +24,20 @@ module.exports = {
            message.includes('excellent')) {
         // Bot: What does j-U-D-G-E spell?  
            Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this response.');
+        }
+
+        // User: Good./Great./Awesome./Amazing./Excellent.
+        // Bot: What does j-U-D-G-E spell?
+       if (message.includes('good') || message.includes('great') || 
+           message.includes('awesome') || message.includes('amazing') || 
+           message.includes('excellent') || message.includes('well')) {
+            Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
+        }
+ 
         // User: Judge.
         } else if (message.includes('judge')) {
         // Bot: So, are you judging me?
