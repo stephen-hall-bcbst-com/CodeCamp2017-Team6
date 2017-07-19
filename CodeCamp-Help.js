@@ -11,9 +11,12 @@ module.exports = {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
+ 
+        message = message.toLowerCase();
 
-        Slack.postMessageToChannel(channelName, 'What do you need help with?');
-
+        if (message.includes('')) {
+            Slack.postMessageToChannel(channelName, 'Hello. How are you?');
+        }
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
