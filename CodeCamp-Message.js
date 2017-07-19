@@ -15,7 +15,7 @@ module.exports = {
         message = message.toLowerCase();
 
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
-            Slack.postMessageToChannel(channelName, 'Hello. How are you?');
+            Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
         }
 
        if (message.includes('good') || message.includes('great') || 
@@ -29,7 +29,7 @@ module.exports = {
         }
 
         if (message.includes('y')) {
-            Slack.postMessageToChannel(channelName, 'One of you said that you take bribes. I have might have $75 if my team wins in 1st place. -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
+            Slack.postMessageToChannel(channelName, ':dollar: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
          }
 
         // *********************************************************************

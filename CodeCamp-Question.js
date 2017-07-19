@@ -14,14 +14,14 @@ module.exports = {
         // *********************************************************************
 
 var replies = [
-            "The answer is: no.", 
-            "The answer is: I have no clue.", 
-            "The answer is: possibly.",
-            "The answer is: yes.",
-            "The answer is: concentrate and ask later.",
-            "The answer is: most likely.",
-            "The answer is: forget it.",
-            "The answer is: I dont know",
+            ":8ball: The answer is: no. :8ball:", 
+            ":8ball: The answer is: I have no clue. :8ball:", 
+            ":8ball: The answer is: possibly. :8ball:",
+            ":8ball: The answer is: yes. :8ball:",
+            ":8ball: The answer is: concentrate and ask later. :8ball:",
+            ":8ball: The answer is: most likely. :8ball:",
+            ":8ball: The answer is: forget it. :8ball:",
+            ":8ball: The answer is: I dont know. :8ball:",
             ];
 
         var response = helper.phraseAtRandom(replies);
