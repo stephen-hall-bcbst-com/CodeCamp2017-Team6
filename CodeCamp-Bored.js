@@ -5,7 +5,7 @@ var helper = require('./Helpers.js');
 module.exports = {
     settings: {
         enabled: true,
-        timeoutInSeconds: 20,
+        timeoutInSeconds: 30,
     },
 
     /**
