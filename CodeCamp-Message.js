@@ -16,16 +16,22 @@ module.exports = {
 
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
 
        if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
            message.includes('excellent')) {
             Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
  
         if (message.includes('judge')) {
             Slack.postMessageToChannel(channelName, 'So, are you judging me?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
 
         if (message.includes('y')) {
