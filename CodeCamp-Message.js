@@ -19,7 +19,7 @@ module.exports = {
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
         } else {
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
+            Slack.postMessageToChannel(channelName, 'I do not recognize this response.');
         }
 
         // User: Good./Great./Awesome./Amazing./Excellent.
@@ -29,7 +29,7 @@ module.exports = {
            message.includes('excellent') || message.includes('well')) {
             Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
         } else {
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
         }
  
         // User: Judge.
@@ -37,7 +37,7 @@ module.exports = {
         if (message.includes('judge')) {
             Slack.postMessageToChannel(channelName, 'So, are you judging me?');
         } else {
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
         }
 
         if (message.includes('y')) {
