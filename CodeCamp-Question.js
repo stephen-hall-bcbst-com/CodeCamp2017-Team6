@@ -15,7 +15,7 @@ module.exports = {
 
 // Time and Date
 
-if (question.includes('what time is it?')) {
+if (question.includes('What time is it?')) {
     Slack.postMessageToChannel(channelName, Date());
     return;
 }
