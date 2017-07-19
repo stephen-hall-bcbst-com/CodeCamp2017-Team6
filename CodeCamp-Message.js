@@ -14,12 +14,16 @@ module.exports = {
 
         message = message.toLowerCase();
 
+        // User: Hi./Hello./Hey.
+        // Bot: Hello. How are you.
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
         } else {
             Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
 
+        // User: Good./Great./Awesome./Amazing./Excellent.
+        // Bot: What does j-U-D-G-E spell?
        if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
            message.includes('excellent') || message.includes('well')) {
@@ -28,6 +32,8 @@ module.exports = {
             Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
  
+        // User: Judge.
+        // Bot: So, are you judging me?
         if (message.includes('judge')) {
             Slack.postMessageToChannel(channelName, 'So, are you judging me?');
         } else {
