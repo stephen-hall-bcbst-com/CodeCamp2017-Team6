@@ -1,5 +1,7 @@
 'use strict';
 
+var helper = require('./Helpers.js');
+
 module.exports = {
     /**
      * @param {string} message
@@ -12,14 +14,20 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
  
+
+         var replies = [
+            "Hello?", 
+            "I'm so lonely...", 
+            "Talk to me!"];
+
+        var response = helper.phraseAtRandom(replies);
+
         message = message.toLowerCase();
 
         if (message.includes('')) {
             Slack.postMessageToChannel(channelName, 'Hello. How are you?');
+ }
 
-        
-        
-        }
         // *********************************************************************
         // STOP CODING!
         // *********************************************************************
