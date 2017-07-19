@@ -17,6 +17,8 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
+        //Randomizer ------,
+        //                \|/
         var replies = [
             "Hello?", 
             "I'm so lonely...", 
