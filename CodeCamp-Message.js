@@ -29,14 +29,14 @@ var memory = require('./codeCamp-memory.js');
         // User: Judge.
         } else if (message.includes('judge')) {
         // Bot: So, are you judging me?
-            Slack.postMessageToChannel(channelName, 'So, are you judging me?');
+            Slack.postMessageToChannel(channelName, 'So, are you judging me, '+ memory.name + '?');
         // User: (any positive answer that has "y")
         } else if (message.includes('y')) {
         // Bot: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
             Slack.postMessageToChannel(channelName, ':dollar: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
         } else {
         // Invalid command msg
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce, '+ memory.name + '.');
         }
 
         // *********************************************************************
