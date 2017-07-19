@@ -13,6 +13,15 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
+// Time and Date
+
+if (question.includes('what time is it?')) {
+    Slack.postMessageToChannel(channelName, Date());
+    return;
+}
+
+// 8 Ball
+
 var replies = [
             ":8ball: The answer is: no. :8ball:", 
             ":8ball: The answer is: I have no clue. :8ball:", 
@@ -28,6 +37,8 @@ var replies = [
 
         if (question.includes('Is') || question.includes('Am') || question.includes('Are')) {
             Slack.postMessageToChannel(channelName, response);
+        } else {
+            Slack.postMessageToChannel(channelName, 'This is not a yes or no question.');
         }
 
         // *********************************************************************

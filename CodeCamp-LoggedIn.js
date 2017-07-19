@@ -11,7 +11,7 @@ module.exports = {
         // *********************************************************************
  
        Slack.postMessageToChannel(channel, '- COPYRIGHT (C) DO NOT COPY ANY OF THIS MATERIAL! -');
-       Slack.postMessageToChannel(channel, ':+1: Say Hi, Hey, or Hello to start.    Please use complete sentences.    Example: Hello.    Say:  - Help. -  for help :+1:');
+       Slack.postMessageToChannel(channel, ':+1: Say Hi, Hey, or Hello to start.    Please use complete sentences.    Example: Hello.    Say:  - Help. -  for help    - What time is it? - for time. :+1:');
  
         // *********************************************************************
         // STOP CODING!
