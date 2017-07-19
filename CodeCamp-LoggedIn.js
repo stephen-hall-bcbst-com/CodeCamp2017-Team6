@@ -9,6 +9,9 @@ module.exports = {
         // *********************************************************************
         // CODE HERE!
         // *********************************************************************
+ 
+//       Instructions and "copyright".---------,
+//                                            \|/
 
         Slack.postMessageToChannel(channel, "Please use complete sentences.");
         Slack.postMessageToChannel(channel, 'Example: Hello.');

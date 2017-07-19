@@ -13,21 +13,32 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
+// Time and Date
+
+if (question.includes('What time is it?')) {
+    Slack.postMessageToChannel(channelName, Date());
+    return;
+}
+
+// 8 Ball
+
 var replies = [
-            "The answer is: no.", 
-            "The answer is: I have no clue.", 
-            "The answer is: possibly.",
-            "The answer is: yes.",
-            "The answer is: concentrate and ask later.",
-            "The answer is: most likely.",
-            "The answer is: forget it.",
-            "The answer is: I dont know",
+            ":8ball: The answer is: no. :8ball:", 
+            ":8ball: The answer is: I have no clue. :8ball:", 
+            ":8ball: The answer is: possibly. :8ball:",
+            ":8ball: The answer is: yes. :8ball:",
+            ":8ball: The answer is: concentrate and ask later. :8ball:",
+            ":8ball: The answer is: most likely. :8ball:",
+            ":8ball: The answer is: forget it. :8ball:",
+            ":8ball: The answer is: I dont know. :8ball:",
             ];
 
         var response = helper.phraseAtRandom(replies);
 
-        if (question.includes('Is') || question.includes('Am') || question.includes('Are')) {
+        if (question.includes('Is') || question.includes('Am') || question.includes('Are') || question.includes('Do')) {
             Slack.postMessageToChannel(channelName, response);
+        } else {
+            Slack.postMessageToChannel(channelName, 'This is not a yes or no question.');
         }
 
         // *********************************************************************

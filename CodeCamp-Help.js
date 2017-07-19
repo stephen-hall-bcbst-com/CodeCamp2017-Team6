@@ -16,6 +16,9 @@ module.exports = {
 
         if (message.includes('')) {
             Slack.postMessageToChannel(channelName, 'Hello. How are you?');
+
+        
+        
         }
         // *********************************************************************
         // STOP CODING!

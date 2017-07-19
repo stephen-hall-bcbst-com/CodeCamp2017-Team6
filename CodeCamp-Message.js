@@ -15,21 +15,27 @@ module.exports = {
         message = message.toLowerCase();
 
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
-            Slack.postMessageToChannel(channelName, 'Hello. How are you?');
+            Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
 
        if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
            message.includes('excellent') || message.includes('well')) {
             Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
  
         if (message.includes('judge')) {
             Slack.postMessageToChannel(channelName, 'So, are you judging me?');
+        } else {
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
         }
 
         if (message.includes('y')) {
-            Slack.postMessageToChannel(channelName, 'One of you said that you take bribes. I have might have $75 if my team wins in 1st place. -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
+            Slack.postMessageToChannel(channelName, ':dollar: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
          }
 
         // *********************************************************************
