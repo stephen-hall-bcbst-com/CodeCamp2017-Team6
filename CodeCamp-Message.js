@@ -19,7 +19,7 @@ module.exports = {
         if (message.includes('hi') || message.includes('hello') || message.includes('hey')) {
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you? :wave:');
         } else {
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.')
+            Slack.postMessageToChannel(channelName, 'I do not recognize this responce.');
         }
 
         // User: Good./Great./Awesome./Amazing./Excellent.
