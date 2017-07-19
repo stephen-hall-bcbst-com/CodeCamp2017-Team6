@@ -17,13 +17,13 @@ module.exports = {
 
 var memory = require('./codeCamp-memory.js');
 
-if (question.includes('What is my name?')) {
+if (question.includes('What is my name')) {
     Slack.postMessageToChannel(channelName, memory.name);
     return;
 }
 // Time and Date
 
-if (question.includes('What time is it?')) {
+if (question.includes('What time is it')) {
     Slack.postMessageToChannel(channelName, Date());
     return;
 }
