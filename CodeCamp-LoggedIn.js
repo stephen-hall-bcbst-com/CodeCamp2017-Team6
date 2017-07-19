@@ -13,7 +13,7 @@ module.exports = {
         Slack.postMessageToChannel(channel, "I'm back for you!");
         Slack.postMessageToChannel(channel, 'Welcome Back!');
         Slack.postMessageToChannel(channel,  "Enjoy your stay!");
-        )
+    
 
         // *********************************************************************
         // STOP CODING!
