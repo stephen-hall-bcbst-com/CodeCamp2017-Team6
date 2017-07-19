@@ -20,7 +20,7 @@ module.exports = {
 
        if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
-           message.includes('excellent') message.includes('well')
+           message.includes('excellent') || message.includes('well')) {
             Slack.postMessageToChannel(channelName, 'What does J-U-D-G-E spell?');
         }
  
