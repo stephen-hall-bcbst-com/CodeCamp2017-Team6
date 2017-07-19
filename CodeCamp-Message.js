@@ -36,7 +36,7 @@ var memory = require('./codeCamp-memory.js');
             Slack.postMessageToChannel(channelName, ':dollar: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
         } else {
         // Invalid command msg
-            Slack.postMessageToChannel(channelName, 'I do not recognize this responce, '+ memory.name + '.');
+            Slack.postMessageToChannel(channelName, 'invld cmmd, '+ memory.name + '.');
         }
 
         // *********************************************************************
