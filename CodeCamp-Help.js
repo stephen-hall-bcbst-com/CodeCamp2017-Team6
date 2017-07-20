@@ -16,6 +16,8 @@ module.exports = {
  
         message = message.toLowerCase();
 
+        // variable responses when asked for help
+
          var replies = [
             "Would you like to ask a question to the magic 8 ball :8ball: ? If so, go right ahead!", 
             "How can I help you? Ask me anything! :8ball: ", 
@@ -28,6 +30,7 @@ module.exports = {
 
         message = message.toLowerCase();
 
+        //    old code \/
         //    if (message.includes('')) {
         //    Slack.postMessageToChannel(channelName, 'Hello. How are you?');
         // }
