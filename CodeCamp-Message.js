@@ -20,6 +20,8 @@ var memory = require('./codeCamp-memory.js');
             memory.lastQuestion = '';
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you, '+ memory.name + '? :wave:');
 
+// + memory.name inserts the name into the question.
+
         // User: Good./Great./Awesome./Amazing./Excellent.  
         } else if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 

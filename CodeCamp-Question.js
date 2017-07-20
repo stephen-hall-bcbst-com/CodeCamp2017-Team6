@@ -20,12 +20,15 @@ var memory = require('./codeCamp-memory.js');
 if (question.includes('What is my name')) {
     Slack.postMessageToChannel(channelName, memory.name);
     return;
+// Bot: (the name)
 }
+
 // Time and Date
 
 if (question.includes('What time is it')) {
     Slack.postMessageToChannel(channelName, Date());
     return;
+// Bot: (the time)
 }
 
 // 8 Ball randomizer
