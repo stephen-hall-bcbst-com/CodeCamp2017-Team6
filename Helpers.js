@@ -18,7 +18,7 @@ module.exports = {
         var fs = require('fs');
         var data = null;
         if (fs.existsSync('./data/' + filename)) {
-            data = fs.readFileSync('./data/' + filename, 'utf8')
+            data = fs.readFileSync('./data/' + filename, 'utf8');
         }
         return data;
     },
