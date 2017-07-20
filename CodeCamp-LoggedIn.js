@@ -17,6 +17,9 @@ module.exports = {
         Slack.postMessageToChannel(channel, 'Example: Hello.');
         Slack.postMessageToChannel(channel, "Start chatting with Boneless Biscuit Bot :smile: ");
         Slack.postMessageToChannel(channel, "What is your name?");
+        
+// Whan name is sent, this records it into the memory
+
 var memory = require('./codeCamp-memory.js');
 memory.lastQuestion = "name";
 
