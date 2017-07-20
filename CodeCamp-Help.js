@@ -14,6 +14,7 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
  
+        message = message.toLowerCase();
 
          var replies = [
             "Would you like to ask a question to the magic 8 ball :8ball: ? If so, go right ahead!", 
