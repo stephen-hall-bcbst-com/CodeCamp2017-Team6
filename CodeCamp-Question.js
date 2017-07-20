@@ -46,7 +46,7 @@ var replies = [
 
         var response = helper.phraseAtRandom(replies);
 
-        if (question.includes('Is') || question.includes('Am') || question.includes('Are') || question.includes('Do')) {
+        if (question.includes('Is') || question.includes('Am') || question.includes('Are') || question.includes('Do') || question.includes('Will')) {
             Slack.postMessageToChannel(channelName, response);
         } else {
             Slack.postMessageToChannel(channelName, 'This is not a yes or no question.');
