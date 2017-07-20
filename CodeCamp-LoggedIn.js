@@ -14,14 +14,14 @@ module.exports = {
 //                            \|/
 
         Slack.postMessageToChannel(channel, "Please use complete sentences.");
-        Slack.postMessageToChannel(channel, 'Example: Hello.');
+        Slack.postMessageToChannel(channel, "QUESTIONS: What time is it? What is my name? (Questions must be asked AFTER telling me your name.)");
         Slack.postMessageToChannel(channel, "What is your name?");
         Slack.postMessageToChannel(channel, "Start chatting with Boneless Biscuit Bot :smile: ");
         
 // Whan name is sent, this records it into the memory
 
 var memory = require('./codeCamp-memory.js');
-memory.lastQuestion = "name";
+memory.Brain.lastQuestion = "name";
 
         // *********************************************************************
         // STOP CODING!
