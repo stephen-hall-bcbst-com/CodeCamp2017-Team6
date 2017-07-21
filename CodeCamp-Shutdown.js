@@ -12,7 +12,7 @@ module.exports = {
 
 var memory = require('./codeCamp-memory.js');
 
-        Slack.postMessageToChannel(channelName, "I am going to sleep. You better be careful when YOU go to sleep.");
+        Slack.postMessageToChannel(channelName, "I am going home.");
         Slack.postMessageToChannel(channelName, "Goodbye, "+ memory.Brain.name);
 
         // *********************************************************************
