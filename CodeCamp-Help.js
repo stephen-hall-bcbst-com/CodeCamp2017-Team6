@@ -15,7 +15,7 @@ module.exports = {
         // *********************************************************************
  
         message = message.toLowerCase();
-
+        // Randomly chooses a reply
         // variable responses when asked for help
 
          var replies = [
@@ -24,7 +24,7 @@ module.exports = {
             "Do you need a question answered? Ask me, don't be shy! :8ball: ",
             "Heard your cry for help! :8ball: ", 
             'Ask me what I know about you! example: "What do you know about me?',
-            'Ask me what time it is! example: "What do you know about me? ',
+            'Ask me what time it is! example: "What time is it? ',
             ];
 
         var response = helper.phraseAtRandom(replies);

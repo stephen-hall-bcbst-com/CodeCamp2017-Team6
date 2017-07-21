@@ -13,15 +13,7 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
-// Name
-
 var memory = require('./codeCamp-memory.js');
-
-if (question.includes('What is my favorite color')) {
-    Slack.postMessageToChannel(channelName, memory.Brain.color);
-    return;
-// Bot: (the color)
-}
 
 // Time and Date
 

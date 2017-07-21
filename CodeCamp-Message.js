@@ -12,22 +12,25 @@ module.exports = {
         // CODE HERE!
         // *********************************************************************
 
+
+        // this makes user message lowercase
         message = message.toLowerCase();
 
 var memory = require('./codeCamp-memory.js');
         if (memory.Brain.lastQuestion == "name") {
+        // saves name into memory
             memory.Brain.name = message;
             memory.Brain.lastQuestion = '';
+        // Bot: Hello. How are you, (name)?
+        // "+ memory.name" inserts the name into the question.
             Slack.postMessageToChannel(channelName, ':wave: Hello. How are you, '+ memory.Brain.name + '? :wave:');
-
-// + memory.name inserts the name into the question.
-
         // User: Good./Great./Awesome./Amazing./Excellent.  
         } else if (message.includes('good') || message.includes('great') || 
            message.includes('awesome') || message.includes('amazing') || 
            message.includes('excellent')) {
         // Bot: What is your favorite color?
             Slack.postMessageToChannel(channelName, 'What is your favorite color?');
+        // records color in memory
             memory.Brain.lastQuestion = 'color';
         } else if (memory.Brain.lastQuestion == "color") {           
             if (message.includes('red') || message.includes('orange') || message.includes('yellow')
@@ -45,7 +48,7 @@ var memory = require('./codeCamp-memory.js');
         // Bot: So, are you judging me?
             Slack.postMessageToChannel(channelName, 'So, are you judging me, '+ memory.Brain.name + '?');
         // User: (any positive answer that has "y")
-        } if (message.includes('y')) {
+        } if (message.includes('ye')) {
         // Bot: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
             Slack.postMessageToChannel(channelName, ':dollar: One of you said that you take bribes. I have might have $75 if my team wins in 1st place. :dollar: -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- Ask me a few yes or no questions.');
         }
