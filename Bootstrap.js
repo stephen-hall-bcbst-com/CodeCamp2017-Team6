@@ -105,13 +105,18 @@ Bot.on('message', function(data) {
                 // store the last channel a message was received in
                 CodeCampMemory.botData.history.lastChannel = channel;
 
-                if (message == CodeCampMemory.botData.killPhrase) {
+                // bail out of encountering an empty or undefined message
+                if (message == undefined || message == '') {
+                    return;
+                }
+
+                if (message == CodeCampMemory.botData.killPhrase || message.toLowerCase() == CodeCampMemory.botData.killPhrase) {
                     CodeCampShutdown.shutdown_received(channel, user, Bot);
                     setTimeout(shutdown, 2500);
                 } else {
-                    if (message.indexOf('help') >= 0) {
+                    if (message.toLowerCase().includes('help')) {
                         CodeCampHelp.asked_for_help(message, channel, user, Bot);
-                    } else if (message.indexOf('?') > 0) {
+                    } else if (message.endsWith('?') > 0) {
                         CodeCampQuestion.question_received(message, channel, user, Bot); 
                     } else {
                         CodeCampMessage.message_received(message, channel, user, Bot);
